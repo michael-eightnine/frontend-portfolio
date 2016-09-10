@@ -1,0 +1,9 @@
+{
+    "name": "Chat-ROM",
+    "description": "Chat-ROM is a completely functional early 2000's style chatroom, primarily built with AngularJS using Firebase for real time data storage. Drawing stylistic influence from the Windows 98 era interfaces I grew up with, Chat-ROM creates a semblance of nostalgia at a surface level while being extremely modern in its functional execution. <a href=\"http:\/\/www.eightninecollective.com/chatrom\" target=\"blank\">View Chat-ROM here.<\/a>",
+    "images": [
+    	"http://eightnine.co/smith/img/chatrom/1.jpg",
+    	"http://eightnine.co/smith/img/chatrom/2.jpg"
+    ],
+    "alt": "Chat-ROM"
+}

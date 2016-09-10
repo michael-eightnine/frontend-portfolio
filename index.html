@@ -1,0 +1,63 @@
+<!doctype html>
+
+<!--
+========================================
+= Michael Smith - Portfolio - Build #5 =
+== Sublime Text 3 - SCSS - AngularJS  ==
+= Like what you've seen? - Contact me! =
+========================================
+-->
+
+<html lang="us" ng-app="PortfolioApp">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>Michael Smith | eight/nine</title>
+	<link href="css/main.min.css" rel="stylesheet" style="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.min.js"></script>
+
+</head>
+
+<body ng-controller="HomeController">
+
+<header>
+	<div class="width-container">
+		<div class="logo">
+			<img src="img/svg/logo.svg" class="svg" alt="michael/smith">
+		</div>
+		<div class="mobile-toggle" id="jsMobileToggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="links">
+			<li><a class="nav-link" href="#work">work</a></li>
+			<li><a class="nav-link" href="#about">about</a></li>
+			<li><a class="nav-link" href="#contact">contact</a></li>
+		</ul>
+	</div>
+</header>
+<main ng-view class="{{ pageClass }}"></main>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/angular/app.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/vendor/angular-slick.js"></script>
+</body>
+</html>
+
+<!-- =============================
+...................___............
+.......________.../  /.._________
+....../  __   /../  /../  ___   /.
+...../  / /  /../  /../  /  /  /..
+..../  /_/  /../  /../  /__/  /...
+.../  __   /../  /../_____   /....
+../  / /  /../  /..___.../  /.....
+./  /_/  /../  /../  /__/  /......
+/_______/../  /../________/.......
+........../__/....................
+============================== -->

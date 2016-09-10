@@ -1,0 +1,25 @@
+<div class="project-content">
+
+    <a class="project-close" href="/smith/#/">
+        <img src="img/close.svg" class="close-button" alt="Close"/>
+    </a>
+
+    <h1 class="content-title">{{detail.name}}</h1>
+
+    <div class="content-description-container">
+        <div class="content-description">
+            <p ng-bind-html="detail.description | safe"> </p>
+        </div>
+    </div>
+
+    <slick ng-if="!video" dots="true" init-onload=true data="detail.images" arrows="true">
+        <div class="carousel-item" ng-repeat="image in detail.images">
+            <img ng-src="{{ image }}">
+        </div>
+    </slick>
+
+    <div ng-if="video" class="vid-container">
+        <iframe width="1000" height="732" frameborder="0" onload="this.style.opacity='1';" webkitallowfullscreen mozallowfullscreen allowfullscreen id="project-vid" ng-src="{{ detail.video }}"></iframe>
+    </div>
+
+</div>

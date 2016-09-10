@@ -1,0 +1,40 @@
+[
+  {
+	  "id": "jakes-market",
+	  "name": "Jake's Market",
+	  "description": "Jake's Market is a fully responsive, multi-theme e-commerce site built off of KonaKart, a java based retail platform. <span class=\"link-style\">Learn More<\/span>",
+	  "langs": [
+		  "Foundation",
+		  "SCSS",
+		  "JavaScript"
+	  ],
+	  "outlink": "false",
+	  "featuredStatus": "regular"
+  },
+  {
+	  "id": "chat-rom",
+	  "name": "Chat-ROM",
+	  "description": "Chat-ROM is a completely functional early 2000's style chatroom, primarily built with AngularJS using Firebase for real time data storage. <span class=\"link-style\">Learn More<\/span>",
+	  "langs": [
+		  "AngularJS",
+		  "Firebase",
+		  "SCSS"
+	  ],
+	  "outlink": "true",
+	  "link": "http://www.eightnine.co/chatrom",
+	  "featuredStatus": "regular"
+  },
+  {
+	  "id": "consolejs",
+	  "name": "ConsoleJS",
+	  "description": "ConsoleJS is a JavaScript plugin for building an old-school console interface that runs custom defined commands and actions. Originally intended as a navigational interface for a personal blog I was building, I saw it could be built out to accept configurations with relative ease and soon enough this plugin was born. <span class=\"link-style\">Learn More<\/span>",
+	  "langs": [
+		  "VanillaJS",
+		  "SCSS",
+		  "That's it!"
+	  ],
+	  "outlink": "true",
+	  "link": "https://github.com/michael-eightnine/consoleJS",
+	  "featuredStatus": "featured"
+  }
+]

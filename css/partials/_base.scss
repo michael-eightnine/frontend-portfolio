@@ -1,0 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400i,600,700';
+
+$blue: blue;
+$black: #000;
+
+$headerZ: 100;
+
+$mainHeader: 38px;
+
+$medBorder: 3px;
+$heavyBorder: 5px;
+
+$widthBreak: 1140px;
+$midBreak: 920px;
+$mobileBreak: 740px;
+$subMobileBreak: 640px;
+
+@mixin transition($time) {
+	-webkit-transition: all $time ease;
+  	transition: all $time ease;
+}
+
+* {box-sizing: border-box}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.svg {
+	max-width: 100%;
+}
+
+a {
+	color: $black;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@keyframes waveHover {
+	from {
+		background-position: center center;
+	}
+	to {
+		background-position: 108.35% center;
+	}
+}
+
+@keyframes waveHoverHalf {
+	from {
+		background-position: center center;
+	}
+	to {
+		background-position: 119% center;
+	}
+}

@@ -1,0 +1,84 @@
+<section class="projects" id="work">
+	<div class="width-container">
+		<div class="projects-header-box">
+			<div class="projects-header-box-inner">
+				<img src="img/svg/front-end-text.svg" alt="Front-end Development" class="svg" />
+				<h1 class="hidden">Front-end Development</h1>
+			</div>
+		</div>
+		<div class="inner projects-list">
+			<span ng-repeat="project in projects" class="project-wrap">
+				<div class="projects-list-item {{project.featuredStatus}}">
+					<a ng-href="{{project.outlink == 'true' ? project.link : ('#/projects/' + project.id)}}" target="{{project.outlink == 'true' ? '_blank' : '_self'}}" class="project-wrap-link" title="View Project">
+						<h3>{{project.name}}</h3>
+						<p class="description" ng-bind-html="project.description | safe"></p>
+						<div class="squiggle"></div>
+						<div class="squiggle half"></div>
+						<div class="langs">
+							<p class="lang" ng-repeat="lang in project.langs">{{lang}}</p>
+						</div>
+					</a>
+				</div>
+			</span>
+		</div>
+	</div>
+</section>
+
+<section class="about" id="about">
+	<div class="width-container">
+		<div class="about-header">
+			<h2>Behind The Code</h2>
+		</div>
+		<div class="inner">
+			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+			<p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+		</div>
+	</div>
+</section>
+
+<section class="contact" id="contact">
+	<div class="width-container contact-background">
+		<div class="inner clearfix">
+			<div class="contact-section direct">
+				<h3>Get In Touch</h3>
+				<ul class="link-list">
+					<li>
+						<div class="sub-header">Email</div>
+						<a href="mailto:michael@eightnine.co">michael@eightnine.co</a>
+					</li>
+					<li>
+						<div class="sub-header">CV</div>
+						<a href="MichaelSmith_CV_2016.pdf" target="_blank">View Here (PDF)</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contact-section online">
+				<h3>Find Me Online</h3>
+				<ul class="link-list">
+					<li>
+						<a href="https://codepen.io/MichaelRyanSmith/" target="_blank">Codepen</a>
+					</li>
+					<li>
+						<a href="https://github.com/michael-eightnine" target="_blank">GitHub</a>
+					</li>
+					<li>
+						<a href="https://vimeo.com/eightnine" target="_blank">Vimeo</a>
+					</li>
+					<li>
+						<a href="https://www.behance.net/michaelryansmith" target="_blank">Behance</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="width-container">
+		<div class="logo">
+			<a href="http://www.eightnine.co" target="_blank">
+				<img src="img/svg/eightnine-logo.svg" class="svg" alt="eight/nine">
+			</a>
+		</div>
+	</div>
+</footer>

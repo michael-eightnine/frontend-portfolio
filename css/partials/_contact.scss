@@ -1,0 +1,57 @@
+.contact {
+	&-background {
+		background: #fff url('../img/svg/contact-graphic.svg') center center no-repeat;
+		background-size: contain;
+	}
+
+	.contact-section {
+		h3 {
+			font-size: $mainHeader;
+			font-weight: 700;
+			padding-bottom: 25px;
+			margin-bottom: 30px;
+			border-bottom: $heavyBorder solid $blue;
+		}
+
+		.link-list {
+			margin: 0;
+
+			li {
+				display: block;
+				margin-bottom: 10px;
+
+				a {
+					display: inline-block;
+					padding: 2px 0;
+					text-decoration: none;
+					font-size: 20px;
+					font-weight: 600;
+
+					&:hover, &:active, &:focus {
+						text-decoration: underline;
+						color: $blue;
+					}
+				}
+			}
+		}
+
+		&.direct {
+			text-align: right;
+
+			.link-list li {
+				margin-bottom: 20px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				.sub-header {
+					font-size: 16px;
+					text-transform: uppercase;
+					font-weight: 700;
+					margin-bottom: 3px;
+				}
+			}
+		}
+	}
+}

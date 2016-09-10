@@ -1,0 +1,191 @@
+
+//generic
+main {
+	section:first-of-type {
+		padding-top: 135px;
+	}
+}
+
+.width-container {
+	width: 100%;
+	max-width: $widthBreak;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	.inner {
+		padding: 0 50px;
+	}
+
+	@media(max-width: 1024px) {
+		padding: 0 20px;
+
+		.inner {
+			padding: 0 30px;
+		}
+	}
+}
+
+//project grid
+.project-wrap {
+
+	.projects-list-item.regular {
+		display: inline-block;
+		margin-right: -4px;
+		width: 50%;
+		margin-bottom: 50px;
+		vertical-align: top;
+	}
+
+	&:nth-of-type(odd) .projects-list-item.regular {
+		padding-right: 5%;
+	}
+
+	&:nth-of-type(even) .projects-list-item.regular {
+		padding-left: 5%;
+	}
+
+	.projects-list-item.featured {
+		width: 100%;
+		margin-top: 55px;
+		position: relative;
+
+		&:before {
+			height: 160px;
+			width: 160px;
+			position: absolute;
+			left: 0;
+			top: -58px;
+		}
+
+		h3, .description {
+			margin-left: 22.5%;
+		}
+
+		.squiggle, .langs {
+			width: 45%;
+			margin-left: auto;
+			margin-right: 0;
+		}
+
+		.squiggle.half {
+			width: 22.5%;
+		}
+	}
+
+	@media(max-width: $midBreak) {
+		.projects-list-item.regular {
+			display: block;
+			margin: 0 auto 50px;
+			width: 100%;
+			max-width: 650px;
+		}
+
+		&:nth-of-type(odd) .projects-list-item.regular,
+		&:nth-of-type(even) .projects-list-item.regular {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.projects-list-item.featured {
+			margin: 65px auto 0;
+			max-width: 650px;
+
+			&:before {
+				height: 80px;
+				width: 80px;
+				left: 0;
+				top: -20px;
+			}
+
+			h3 {
+				text-indent: 100px;
+				padding-bottom: 35px;
+			}
+
+			h3, .description {
+				margin-left: 0;
+			}
+
+			.squiggle, .langs {
+				width: 100%;
+			}
+
+			.squiggle.half {
+				width: 50%;
+			}
+		}
+	}
+}
+
+//about section
+.about {
+	padding-top: 100px;
+
+	&-header {
+		padding-left: 11.5%;
+
+		&:before {
+			left: 0px;
+			top: -100%;
+			height: 270px;
+			width: 320px;
+		}
+
+		@media(max-width: $midBreak) {
+
+			&:before {
+				height: 200px;
+				width: 237px;
+				top: -96%;
+			}
+		}
+	}
+
+	p {
+		margin-left: 22.5%;
+
+		@media(max-width: $widthBreak) {
+			&:first-of-type {
+				padding-top: 10px;
+			}
+		}
+
+		@media(max-width: $midBreak) {
+			margin-left: auto;
+			margin-right: auto;
+
+			&:first-of-type {
+				padding-top: 30px;
+			}
+		}
+	}
+}
+
+//contact
+.contact {
+	margin-top: 30px;
+
+	&-background {
+		padding-top: 50px;
+	}
+
+	.contact-section {
+		padding: 40px 0;
+		width: 50%;
+		clear: both;
+
+		&.direct {
+			float: right;
+			padding-left: 5%;
+		}
+
+		&.online {
+			float: left;
+			padding-right: 5%;
+		}
+	}
+
+	@media(max-width: $midBreak) {
+		margin-top: 0;
+	}
+}

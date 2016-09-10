@@ -1,0 +1,151 @@
+.projects {
+	//FRONT END DEV HEADER
+	&-header-box {
+		border: $heavyBorder solid $black;
+		background: #FFF url('../img/svg/wave2.svg') repeat;
+		padding: 30px;
+		background-size: 75px 18.5px;
+
+		.hidden {
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		&-inner {
+			margin: 15px;
+			background: #fff url("../img/svg/front-end-text-black.svg") top center repeat-y;
+			background-size: 964px 81px;
+			background-attachment: fixed;
+			box-shadow: inset 15px 25px 0 0 white, inset -15px -25px 0 0 white;
+
+			img {
+				width: 100%;
+				padding: calc(100% / 6.666) 15px;
+			}
+
+			@media(max-width: $widthBreak) {
+				background: #fff;
+				background-attachment: initial;
+				box-shadow: none;
+				padding: 25px 15px;
+
+				img {
+					background: #fff url("../img/svg/front-end-text-black.svg") top center repeat-y;
+					background-size: calc(100% - 30px) 20%;
+				}
+			}
+
+			@media(max-width: $mobileBreak) {
+				padding: 20px 15px;
+				
+				img {
+					background: #fff;
+					padding: 20px 15px;
+				}
+
+				&:before, &:after {
+					content: url('../img/svg/front-end-text-black.svg');
+					display: block;
+					width: calc(100% - 30px);
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+
+	//PROJECT BLOCKS
+	&-list {
+		margin-top: 90px;
+		text-align: center;
+
+		&-item {
+			text-align: left;
+
+			.project-wrap-link {
+				text-decoration: none;
+
+				&:hover {
+					.squiggle, .squiggle.half {
+						animation-play-state: running;
+					}
+				}
+			}
+
+			h3 {
+				font-size: $mainHeader;
+				font-weight: 700;
+				padding-bottom: 25px;
+				margin-bottom: 30px;
+				border-bottom: $heavyBorder solid $blue;
+			}
+
+			.description {
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 1.65;
+				margin-bottom: 40px;
+
+				.link-style {
+					text-transform: uppercase;
+					color: $blue;
+					font-size: 14px;
+					display: inline-block;
+					margin-left: 3px;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.squiggle {
+				background: #FFF url('../img/svg/wave2.svg') center center repeat-x;
+				background-size: 58px 15px;
+				height: 15px;
+
+				animation: waveHover 4s linear infinite;
+				animation-play-state: paused;
+
+				&.half {
+					width: 50%;
+					margin-left: auto;
+					margin-right: 0;
+					margin-top: 25px;
+
+					animation: waveHoverHalf 2s linear infinite;
+					animation-play-state: paused;
+				}
+			}
+
+			.langs .lang {
+				font-size: 20px;
+				font-weight: 400;
+				font-style: italic;
+				text-align: left;
+				margin-bottom: 20px;
+
+				&:first-of-type {
+					margin-top: 5px;
+				}
+
+				&:nth-of-type(2) {
+					text-align: center;
+				}
+
+				&:last-of-type {
+					text-align: right;
+				}
+			}
+
+			//"FEATURED" IMG
+			&.featured {
+				&:before {
+					content: '';
+					background: transparent url(../img/svg/featured.svg) top center no-repeat;
+					display: block;
+				}
+			}
+		}
+	}
+}
