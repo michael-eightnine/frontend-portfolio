@@ -2,10 +2,13 @@
 
 $blue: blue;
 $black: #000;
+$transWhite:  rgba(255, 255, 255, .975);
 
 $headerZ: 100;
 
 $mainHeader: 38px;
+$mainHeaderMobile: 32px;
+$mainHeaderMini: 28px;
 
 $medBorder: 3px;
 $heavyBorder: 5px;
@@ -14,10 +17,21 @@ $widthBreak: 1140px;
 $midBreak: 920px;
 $mobileBreak: 740px;
 $subMobileBreak: 640px;
+$finalBreak: 460px;
 
 @mixin transition($time) {
 	-webkit-transition: all $time ease;
   	transition: all $time ease;
+}
+
+@mixin mobileHeader() {
+	@media(max-width: $mobileBreak) {
+		font-size: $mainHeaderMobile;
+	}
+
+	@media(max-width: $finalBreak) {
+		font-size: $mainHeaderMini;
+	}
 }
 
 * {box-sizing: border-box}

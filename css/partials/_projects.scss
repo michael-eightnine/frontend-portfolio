@@ -38,7 +38,7 @@
 
 			@media(max-width: $mobileBreak) {
 				padding: 20px 15px;
-				
+
 				img {
 					background: #fff;
 					padding: 20px 15px;
@@ -52,6 +52,23 @@
 				}
 			}
 		}
+
+		@media(max-width: $finalBreak) {
+			padding: 8px;
+			background-size: 55px 13.5px;
+
+			&-inner {
+				padding: 20px 0px;
+
+				img {
+					padding: 15px 10px;
+				}
+
+				&:before, &:after {
+					width: calc(100% - 20px);
+				}
+			}
+		}
 	}
 
 	//PROJECT BLOCKS
@@ -59,11 +76,20 @@
 		margin-top: 90px;
 		text-align: center;
 
+		@media(max-width: $mobileBreak) {
+			margin-top: 65px;
+		}
+
+		@media(max-width: $finalBreak) {
+			margin-top: 45px;
+		}
+
 		&-item {
 			text-align: left;
 
 			.project-wrap-link {
 				text-decoration: none;
+				display: inline-block;
 
 				&:hover {
 					.squiggle, .squiggle.half {
@@ -78,6 +104,17 @@
 				padding-bottom: 25px;
 				margin-bottom: 30px;
 				border-bottom: $heavyBorder solid $blue;
+
+				@include mobileHeader();
+
+				@media(max-width: $subMobileBreak) {
+					padding-bottom: 20px;
+					margin-bottom: 25px;
+				}
+
+				@media(max-width: $finalBreak) {
+					margin-bottom: 20px;
+				}
 			}
 
 			.description {
@@ -90,7 +127,6 @@
 					text-transform: uppercase;
 					color: $blue;
 					font-size: 14px;
-					display: inline-block;
 					margin-left: 3px;
 
 					&:hover {
@@ -115,6 +151,14 @@
 
 					animation: waveHoverHalf 2s linear infinite;
 					animation-play-state: paused;
+				}
+
+				@media(max-width: 1024px) {
+					animation: none;
+
+					&.half {
+						animation: none;
+					}
 				}
 			}
 
@@ -144,6 +188,28 @@
 					content: '';
 					background: transparent url(../img/svg/featured.svg) top center no-repeat;
 					display: block;
+				}
+			}
+
+			@media(max-width: $subMobileBreak) {
+				.description {
+					font-size: 16px;
+					line-height: 1.5;
+					margin-bottom: 30px;
+				}
+
+				.langs .lang {
+					font-size: 18px;
+				}
+			}
+
+			@media(max-width: $finalBreak) {
+				.description {
+					font-size: 15px;
+				}
+
+				.langs .lang {
+					font-size: 17px;
 				}
 			}
 		}

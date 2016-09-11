@@ -19,22 +19,7 @@ app.config(function ($routeProvider) {
 
 //HEADER INIT REGARDLESS OF VIEW LOADED
 app.run(function($rootScope) {
-	function bindListeners() {
-		$("header").on("click", ".mobile-toggle", function() {
-			$(this).toggleClass("active");
-		})
 
-		$("header").on("click", ".nav-link", function(e) {
-			e.preventDefault();
-			e.stopImmediatePropagation();
-			var anchor = $(this).attr("href");
-			$('html, body').animate({
-				scrollTop: $(anchor).offset().top
-			}, 500);
-		})
-	}
-
-	bindListeners();
 });
 
 //FIX INTERPOLATION ERROR
@@ -49,16 +34,33 @@ app.config(function ($sceDelegateProvider) {
 app.controller('HomeController', ['$scope', 'projects', function($scope, projects) {
 	projects.success(function(data) {
 		$scope.projects = data;
+	});
 
-		//Assign page class for animation
-		$scope.pageClass = 'home-screen';
+	//Assign page class for animation
+	$scope.pageClass = 'home-screen';
 
+	//init function for binding
+	function bindListeners() {
+		$("header").on("click", ".mobile-toggle", function() {
+			$(this).toggleClass("active");
+		})
 
+		$("header").on("click", ".nav-link", function(e) {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			if($(window).width() <= 740)
+				$(".mobile-toggle").removeClass("active");
 
-		//Home page initializations
-		angular.element(document).ready(function () {
-			// run home init if necessary
-		});
+			var anchor = $(this).attr("href");
+			$('html, body').animate({
+				scrollTop: $(anchor).offset().top - 60
+			}, 500);
+		})
+	}
+
+	//Home page initializations
+	angular.element(document).ready(function () {
+		bindListeners();
 	});
 }]);
 

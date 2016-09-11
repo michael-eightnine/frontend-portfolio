@@ -1,3 +1,22 @@
+<header>
+	<div class="width-container">
+		<div class="logo">
+			<img src="img/svg/logo.svg" class="svg" alt="michael/smith">
+		</div>
+		<div class="mobile-toggle" id="jsMobileToggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul class="links">
+			<li><a class="nav-link" href="#work">work</a></li>
+			<li><a class="nav-link" href="#focus">focus</a></li>
+			<li><a class="nav-link" href="#about">about</a></li>
+			<li><a class="nav-link" href="#contact">contact</a></li>
+		</ul>
+	</div>
+</header>
+
 <section class="projects" id="work">
 	<div class="width-container">
 		<div class="projects-header-box">
@@ -9,7 +28,7 @@
 		<div class="inner projects-list">
 			<span ng-repeat="project in projects" class="project-wrap">
 				<div class="projects-list-item {{project.featuredStatus}}">
-					<a ng-href="{{project.outlink == 'true' ? project.link : ('#/projects/' + project.id)}}" target="{{project.outlink == 'true' ? '_blank' : '_self'}}" class="project-wrap-link" title="View Project">
+					<a ng-href="#/projects/{{project.id}}" class="project-wrap-link" title="View Project">
 						<h3>{{project.name}}</h3>
 						<p class="description" ng-bind-html="project.description | safe"></p>
 						<div class="squiggle"></div>
@@ -27,7 +46,7 @@
 <section class="about" id="about">
 	<div class="width-container">
 		<div class="about-header">
-			<h2>Behind The Code</h2>
+			<h2>Behind <br>The Code</h2>
 		</div>
 		<div class="inner">
 			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>

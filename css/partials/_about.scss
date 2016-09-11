@@ -27,6 +27,16 @@
 			@media(max-width: $midBreak) {
 				padding: 20px;
 			}
+
+			@include mobileHeader();
+
+			br {
+				display: none;
+
+				@media(max-width: $subMobileBreak) {
+					display: inline;
+				}
+			}
 		}
 	}
 
@@ -35,5 +45,13 @@
 		line-height: 1.5;
 		font-size: 18px;
 		font-weight: 600;
+
+		@media(max-width: $subMobileBreak) {
+			font-size: 16px;
+		}
+
+		@media(max-width: $finalBreak) {
+			font-size: 15px;
+		}
 	}
 }

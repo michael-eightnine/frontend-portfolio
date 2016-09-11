@@ -3,6 +3,10 @@
 main {
 	section:first-of-type {
 		padding-top: 135px;
+
+		@media(max-width: $finalBreak) {
+			padding-top: 115px;
+		}
 	}
 }
 
@@ -21,6 +25,20 @@ main {
 
 		.inner {
 			padding: 0 30px;
+		}
+	}
+
+	@media(max-width: $mobileBreak) {
+		padding: 0 10px;
+
+		.inner {
+			padding: 0 20px;
+		}
+	}
+
+	@media(max-width: $finalBreak) {
+		.inner {
+			padding: 0 10px;
 		}
 	}
 }
@@ -115,28 +133,79 @@ main {
 			}
 		}
 	}
+
+	@media(max-width: $mobileBreak) {
+		.projects-list-item.featured {
+			margin-top: 55px;
+
+			&:before {
+				top: -23px;
+			}
+		}
+
+		.projects-list-item.regular {
+			margin-bottom: 35px;
+		}
+	}
+
+	@media(max-width: $finalBreak) {
+		.projects-list-item.featured {
+			margin-top: 40px;
+
+			&:before {
+				height: 70px;
+				width: 70px;
+				top: -19px;
+			}
+
+			h3 {
+				text-indent: 85px;
+			}
+		}
+
+		.projects-list-item.regular {
+			margin-bottom: 25px;
+		}
+	}
 }
 
 //about section
 .about {
 	padding-top: 100px;
 
+	@media(max-width: $finalBreak) {
+		padding-top: 85px;
+	}
+
 	&-header {
 		padding-left: 11.5%;
+
+		@media(max-width: $finalBreak) {
+			padding-left: 4.75%;
+		}
 
 		&:before {
 			left: 0px;
 			top: -100%;
 			height: 270px;
 			width: 320px;
-		}
 
-		@media(max-width: $midBreak) {
+			@media(max-width: $midBreak) {
+					height: 200px;
+					width: 237px; //no magic - just aspect ratio
+					top: -96%;
+			}
 
-			&:before {
-				height: 200px;
-				width: 237px;
-				top: -96%;
+			@media(max-width: $mobileBreak) {
+					top: -108%;
+			}
+
+			@media(max-width: $subMobileBreak) {
+					top: -62%;
+			}
+
+			@media(max-width: $finalBreak) {
+					top: -72%;
 			}
 		}
 	}
@@ -156,6 +225,12 @@ main {
 
 			&:first-of-type {
 				padding-top: 30px;
+			}
+		}
+
+		@media(max-width: $subMobileBreak) {
+			&:first-of-type {
+				padding-top: 15px;
 			}
 		}
 	}
@@ -187,5 +262,52 @@ main {
 
 	@media(max-width: $midBreak) {
 		margin-top: 0;
+	}
+
+	@media(max-width: $mobileBreak) {
+		margin-top: 40px;
+
+		.contact-section {
+			width: calc(100% - 20%);
+			max-width: 650px;
+			margin: 0 auto 0 20%;
+
+			&.direct, &.online {
+				float: none;
+				padding-left: 0;
+				padding-right: 0;
+				text-align: right;
+			}
+		}
+	}
+
+	@media(max-width: $subMobileBreak) {
+		&-background {
+			padding-top: 0;
+		}
+
+		.contact-section {
+			padding: 25px 0;
+		}
+	}
+
+	@media(max-width: $finalBreak) {
+		margin-top: 45px;
+
+		&-background {
+			padding-top: 65px;
+		}
+
+		.contact-section {
+			width: calc(100% - 22.5%);
+		    margin: 0 auto 0 22.5%;
+		}
+	}
+
+	@media(max-width: 350px) {
+		.contact-section {
+			width: 100%;
+			margin: 0 auto;
+		}
 	}
 }

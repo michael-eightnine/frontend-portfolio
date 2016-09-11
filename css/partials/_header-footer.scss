@@ -6,7 +6,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(255, 255, 255, .975);
+	background-color: $transWhite;
 	border-bottom: $medBorder solid $blue;
 	z-index: $headerZ;
 
@@ -21,14 +21,17 @@ header {
 
 		img {
 			width: 100%;
-			max-width: 175px;
-			position: relative;
+			max-width: 177px;
+			// position: relative;
 			z-index: 1;
-			transform: translateY(50%);
-				-webkit-transform: translateY(50%);
+			// transform: translateY(50%);
+			// 	-webkit-transform: translateY(50%);
 
-			@media(max-width: $mobileBreak) {
-				// max-width: 174px;
+			position: absolute;
+			top: 50%;
+
+			@media(max-width: $finalBreak) {
+				top: 24px;
 			}
 		}
 	}
@@ -43,12 +46,15 @@ header {
 			cursor: pointer;
 
 			&.active + .links {
-				opacity: 1;
-				transform: translateY(0);
-					-webkit-transform: translateY(0);
+				height: calc(100vh - 66px); //66 is header height
+			}
+		}
 
-				transition: transform .25s ease, opacity .25s ease .15s;
-					-webkit-transition: transform .25s ease, opacity .25s ease .15s;
+		@media(max-width: $finalBreak) {
+			padding: 15px 0;
+
+			&.active + .links {
+				height: calc(100vh - 58px); //58 is header height
 			}
 		}
 
@@ -95,19 +101,26 @@ header {
 	.links {
 		text-align: right;
 		vertical-align: top;
-		width: calc(100% - 175px);
+		// width: calc(100% - 175px);
+		width: 100%;
 
 		@media(max-width: $mobileBreak) {
 			position: fixed;
+			background-color: $transWhite;
+			height: 0;
+			overflow: hidden;
 			width: 100%;
-			top: 75px;
+			top: 66px; //66 is header height
 			left: 0;
 			z-index: -1;
-			opacity: 0;
-			transform: translateY(-150%);
-				-webkit-transform: translateY(-150%);
-			transition: transform .25s ease .15s, opacity .20s ease 0s;
-				-webkit-transition: transform .25s ease .15s, opacity .20s ease 0s;
+
+			will-change: height;
+			transition: height .25s ease .15s;
+				-webkit-transition: height .25s ease .15s;
+		}
+
+		@media(max-width: $finalBreak) {
+			top: 58px;
 		}
 
 		li {
@@ -131,23 +144,48 @@ header {
 					color: $blue;
 				}
 
-				&:after {
-					// content: '';
-					height: $medBorder;
-					width: 100%;
-					background-color: transparent;
-					display: block;
-					position: absolute;
-					bottom: -3px;
-					left: 0;
+				@media(max-width: $midBreak) {
+					padding: 0 20px;
+				}
+			}
 
-					@media(max-width: $mobileBreak) {
+			@media(max-width: $mobileBreak) {
+				display: block;
+				margin: 10px 0;
+				padding: 5px 35px;
+				text-align: center;
+
+				&:first-of-type {
+					padding-top: 35px;
+				}
+
+				&:last-of-type {
+					padding-bottom: 35px;
+
+					a:after {
 						display: none;
 					}
 				}
 
-				&:hover:after {
-					background-color: $black;
+				a {
+					padding: 15px 0;
+					font-size: 20px;
+					position: relative;
+
+					&:hover, &:active, &:focus {
+						text-decoration: underline;
+					}
+
+					&:after {
+						content: '';
+						background: #FFF url('../img/svg/wave2.svg') center center repeat-x;
+						background-size: 40px 10px;
+						height: 10px;
+						width: 50%;
+						position: absolute;
+						left: 25%;
+						bottom: -16px
+					}
 				}
 			}
 		}
@@ -163,15 +201,22 @@ footer {
 
 	.logo {
 		display: inline-block;
-		margin-right: -4px;
+		margin-right: -2px;
 
 		img {
-			width: 100%;
-			max-width: 142px;
+			width: 142px;
 			position: relative;
 			z-index: 1;
 			transform: translateY(-50%);
 				-webkit-transform: translateY(-50%);
 		}
+	}
+
+	@media(max-width: $mobileBreak) {
+		margin-top: 120px;
+	}
+
+	@media(max-width: $finalBreak) {
+		margin-top: 70px;
 	}
 }
