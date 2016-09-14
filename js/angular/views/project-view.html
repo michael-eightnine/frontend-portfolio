@@ -12,14 +12,9 @@
         </div>
     </div>
 
-    <slick ng-if="!video" dots="true" init-onload=true data="detail.images" arrows="true">
+    <slick ng-if="detail.images.length > 0" dots="true" init-onload=true data="detail.images" arrows="true">
         <div class="carousel-item" ng-repeat="image in detail.images">
             <img ng-src="{{ image }}">
         </div>
     </slick>
-
-    <div ng-if="video" class="vid-container">
-        <iframe width="1000" height="732" frameborder="0" onload="this.style.opacity='1';" webkitallowfullscreen mozallowfullscreen allowfullscreen id="project-vid" ng-src="{{ detail.video }}"></iframe>
-    </div>
-
 </div>

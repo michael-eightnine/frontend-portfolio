@@ -74,10 +74,6 @@ app.controller('ProjectController', ['$scope', '$routeParams', '$http',
 		.error(function(data) {
 			console.log("Failed to get data")
 		});
-		//Check if video project
-		if ( $routeParams.projectId == "NIGHT-GLIDE" || $routeParams.projectId == "HelpWitChu") {
-			$scope.video = true;
-		}
 
 		//Assign page class for animation
 		$scope.pageClass = 'project-screen project-content';
