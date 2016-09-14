@@ -6,5 +6,9 @@
     	"http://eightnine.co/smith/img/jakes/2.png",
     	"http://eightnine.co/smith/img/jakes/3.png"
     ],
-    "alt": "Jake's Market"
+    "langs": [
+        "Foundation",
+        "SCSS",
+        "JavaScript"
+    ]
 }

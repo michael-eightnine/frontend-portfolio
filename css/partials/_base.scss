@@ -38,6 +38,7 @@ $finalBreak: 460px;
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	background: #FFF;
 }
 
 .svg {
@@ -64,6 +65,24 @@ a {
 }
 
 @keyframes waveHoverHalf {
+	from {
+		background-position: center center;
+	}
+	to {
+		background-position: 119% center;
+	}
+}
+
+@-webkit-keyframes waveHover {
+	from {
+		background-position: center center;
+	}
+	to {
+		background-position: 108.35% center;
+	}
+}
+
+@-webkit-keyframes waveHoverHalf {
 	from {
 		background-position: center center;
 	}

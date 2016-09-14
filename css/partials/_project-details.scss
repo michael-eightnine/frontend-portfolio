@@ -1,0 +1,136 @@
+.project-content {
+	background: #FFF;
+	.header-section {
+		border-bottom: $medBorder solid $blue;
+
+		.width-container {
+			position: relative;
+			height: 63px;
+		}
+
+		h1 {
+			font-size: $mainHeader;
+			font-weight: 700;
+			padding: 15px;
+			background-color: #fff;
+			position: absolute;
+			left: 15px;
+			top: 25px;
+
+			// @include mobileHeader();
+
+			@media(max-width: 1024px) {
+				left: 20px;
+			}
+		}
+
+		.langs {
+			position: absolute;
+			right: 15px;
+			top: 30px;
+			background: #FFF;
+			border: $medBorder solid $black;
+			text-align: center;
+			min-width: 190px;
+
+			.lang {
+				padding: 20px 35px;
+				font-weight: 400;
+				font-style: italic;
+				font-size: 20px;
+
+				&:first-of-type {
+					padding-top: 30px;
+				}
+
+				&:last-of-type {
+					padding-bottom: 30px;
+				}
+			}
+
+			@media(max-width: 1024px) {
+				min-width: 170px;
+				right: 25px;
+			}
+		}
+	}
+
+	.content-description-container {
+		position: relative;
+		width: calc(100% - 190px);
+		margin-top: 55px;
+
+		.close-btn {
+			height: 60px;
+			width: 60px;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+ 			transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+
+			@media(max-width: $midBreak) {
+				left: 5px;
+			}
+
+			.diamond {
+			    transform-origin: center center;
+				transform: rotate(-45deg);
+				will-change: transform;
+				transition: transform .45s ease;
+			}
+
+			&:hover, &:active, &:focus {
+				.diamond {
+					transform: rotate(-225deg);
+				}
+			}
+		}
+
+		.content-description {
+			padding-left: 105px;
+			padding-right: 50px;
+
+			p {
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 1.65;
+			}
+
+			@media(max-width: $midBreak) {
+				padding-right: 10px;
+				padding-left: 95px;
+			}
+		}
+	}
+
+	.btns-container {
+		text-align: center;
+		padding-top: 55px;
+
+		.btn {
+			line-height: 40px;
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			width: 195px;
+			max-width: 100%;
+			display: inline-block;
+			margin-right: -4px;
+			color: $blue;
+			border: $medBorder solid $blue;
+			text-decoration: none;
+			@include transition(.25s);
+
+			& + .btn {
+				margin-left: 30px;
+			}
+
+			&:hover, &:focus, &:active {
+				color: white;
+				background-color: $blue;
+			}
+		}
+	}
+}

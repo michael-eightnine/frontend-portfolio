@@ -1,20 +1,36 @@
 <div class="project-content">
+    <div class="header-section">
+        <div class="width-container">
+            <h1 class="project-content-title">{{detail.name}}</h1>
 
-    <a class="project-close" href="/smith/#/">
-        <img src="img/close.svg" class="close-button" alt="Close"/>
-    </a>
-
-    <h1 class="content-title">{{detail.name}}</h1>
-
-    <div class="content-description-container">
-        <div class="content-description">
-            <p ng-bind-html="detail.description | safe"> </p>
+            <div class="langs">
+                <div class="lang" ng-repeat="lang in detail.langs">{{lang}}</div>
+            </div>
         </div>
     </div>
-
-    <slick ng-if="detail.images.length > 0" dots="true" init-onload=true data="detail.images" arrows="true">
-        <div class="carousel-item" ng-repeat="image in detail.images">
-            <img ng-src="{{ image }}">
+    <div class="width-container">
+        <div class="content-description-container">
+            <a class="close-btn" href="/smith/#/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.24 84.24" class="svg"><rect x="13.84" y="13.84" width="56.57" height="56.57" fill="none" stroke="blue" stroke-miterlimit="10" stroke-width="3" class="diamond"/><polygon points="56.74 40.7 31.71 40.7 43.37 29.05 41.25 26.92 25.9 42.27 41.25 57.62 43.37 55.49 31.58 43.7 56.74 43.7 56.74 40.7"/></svg>
+            </a>
+            <div class="content-description">
+                <p ng-bind-html="detail.description | safe"> </p>
+            </div>
         </div>
-    </slick>
+
+        <div class="btns-container" ng-if="detail.githubUrl || detail.demoUrl">
+             <a ng-if="detail.githubUrl" ng-href="{{detail.githubUrl}}" class="btn">
+                 View GitHub
+             </a>
+             <a ng-if="detail.demoUrl" ng-href="{{detail.demoUrl}}" class="btn">
+                 View Demo
+             </a>
+        </div>
+
+        <slick ng-if="detail.images" dots="true" init-onload=true data="detail.images" arrows="true">
+            <div class="carousel-item" ng-repeat="image in detail.images">
+                <img ng-src="{{ image }}">
+            </div>
+        </slick>
+    </div>
 </div>
