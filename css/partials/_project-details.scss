@@ -1,5 +1,7 @@
 .project-content {
 	background: #FFF;
+	padding-bottom: 25px;
+
 	.header-section {
 		border-bottom: $medBorder solid $blue;
 
@@ -21,6 +23,27 @@
 
 			@media(max-width: 1024px) {
 				left: 20px;
+			}
+		}
+
+		.mobile-close {
+			height: 45px;
+			width: 45px;
+			margin-top: 9px;
+			margin-right: 10px;
+			display: none;
+
+			.diamond {
+				transform-origin: center center;
+				transform: rotate(-45deg);
+				will-change: transform;
+				transition: transform .45s ease;
+			}
+
+			&:hover, &:active, &:focus {
+				.diamond {
+					transform: rotate(-225deg);
+				}
 			}
 		}
 
@@ -51,6 +74,68 @@
 			@media(max-width: 1024px) {
 				min-width: 170px;
 				right: 25px;
+			}
+		}
+
+		@media(max-width: $mobileBreak) {
+			h1 {
+				padding: 0 0 0 10px;
+				font-size: $mainHeaderMobile;
+				position: static;
+				line-height: 63px;
+				background-color: transparent;
+			}
+
+			.langs {
+				min-width: 0;
+
+				.lang {
+					padding: 20px;
+					font-size: 18px;
+					display: inline-block;
+					margin-right: -4px;
+
+					&:first-of-type, &:last-of-type {
+						padding-top: 20px;
+						padding-bottom: 20px;
+					}
+				}
+			}
+		}
+
+		@media(max-width: $subMobileBreak) {
+			h1 {
+				display: inline-block;
+			}
+
+			.mobile-close {
+				float: right;
+				display: block;
+			}
+
+			.langs {
+				top: calc(100% + 25px);
+				right: 50%;
+				transform: translateX(50%);
+					-webkit-transform: translateX(50%);
+				max-width: 100%;
+				white-space: nowrap;
+			}
+		}
+
+		@media(max-width: $finalBreak) {
+			h1 {
+				font-size: $mainHeaderMini;
+			}
+
+			.langs {
+				padding: 0 5px;
+
+				.lang {
+					font-size: 16px;
+					padding-left: 15px;
+					padding-right: 15px;
+				}
 			}
 		}
 	}
@@ -103,6 +188,34 @@
 				padding-left: 95px;
 			}
 		}
+
+		@media(max-width: $mobileBreak) {
+			width: 100%;
+
+			.close-btn {
+				left: 15px;
+			}
+
+			.content-description {
+				padding-right: 15px;
+
+				p {
+					font-size: 16px;
+				}
+			}
+		}
+
+		@media(max-width: $subMobileBreak) {
+			margin-top: 115px;
+
+			.close-btn {
+				display: none;
+			}
+
+			.content-description {
+				padding-left: 15px;
+			}
+		}
 	}
 
 	.btns-container {
@@ -131,6 +244,37 @@
 				color: white;
 				background-color: $blue;
 			}
+		}
+
+		@media(max-width: $subMobileBreak) {
+			padding-top: 35px;
+
+			.btn {
+				font-size: 18px;
+			}
+		}
+
+		@media(max-width: $finalBreak) {
+			.btn {
+				width: calc(100% - 25px);
+
+				& + .btn {
+					margin-top: 20px;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.slick-slider {
+		padding-top: 45px;
+
+		img {
+			max-width: 100%;
+		}
+
+		@media(max-width: $subMobileBreak) {
+			padding-top: 35px;
 		}
 	}
 }
