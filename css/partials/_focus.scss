@@ -1,0 +1,40 @@
+.focus {
+
+	svg {
+		.diamond {
+			transform-origin: center center;
+			transform: rotate(-45deg);
+			will-change: transform;
+			transition: transform .45s ease;
+		}
+	}
+
+	&-item:hover {
+		svg .diamond {
+			transform: rotate(-225deg);
+		}
+	}
+
+	h3 {
+		font-size: $mainHeaderMobile;
+		text-align: center;
+		margin-top: 25px;
+		margin-bottom: 10px;
+		font-weight: 700;
+
+		@media(max-width: $finalBreak) {
+			font-size: $mainHeaderMini;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+		font-size: 16px;
+		line-height: 1.4;
+		text-align: justify;
+
+		@media(max-width: $finalBreak) {
+			font-size: 15px;
+		}
+	}
+}

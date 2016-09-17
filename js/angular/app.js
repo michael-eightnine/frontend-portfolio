@@ -53,7 +53,7 @@ app.controller('HomeController', ['$scope', 'projects', function($scope, project
 
 			var anchor = $(this).attr("href");
 			$('html, body').animate({
-				scrollTop: $(anchor).offset().top - 60
+				scrollTop: $(anchor).offset().top - 70
 			}, 500);
 		})
 	}

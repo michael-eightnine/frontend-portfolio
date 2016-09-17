@@ -20,6 +20,10 @@ main {
 		padding: 0 50px;
 	}
 
+	.mobile-inner {
+		padding: 0;
+	}
+
 	@media(max-width: 1024px) {
 		padding: 0 20px;
 
@@ -31,13 +35,13 @@ main {
 	@media(max-width: $mobileBreak) {
 		padding: 0 10px;
 
-		.inner {
+		.inner, .mobile-inner {
 			padding: 0 20px;
 		}
 	}
 
 	@media(max-width: $finalBreak) {
-		.inner {
+		.inner, .mobile-inner {
 			padding: 0 10px;
 		}
 	}
@@ -231,6 +235,83 @@ main {
 		@media(max-width: $subMobileBreak) {
 			&:first-of-type {
 				padding-top: 15px;
+			}
+		}
+	}
+}
+
+//focus
+.focus {
+	&-item {
+		width: 33.33%;
+		display: inline-block;
+		margin-right: -4px;
+		padding: 0 30px;
+		vertical-align: top;
+
+		&:first-of-type {
+			padding-left: 0;
+		}
+
+		&:nth-of-type(2) {
+			margin-top: 10%;
+			padding: 0 15px;
+		}
+
+		&:last-of-type {
+			margin-top: 20%;
+			padding-right: 0;
+		}
+
+		&-icon {
+			text-align: center;
+
+			svg {
+				width: 140px;
+				height: 140px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		@media(max-width: $midBreak) {
+			display: block;
+			width: 100%;
+			max-width: 650px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 !important;
+			margin-bottom: 55px;
+
+			&:first-of-type {
+				margin-top: 55px;
+			}
+
+			&:nth-of-type(2) {
+				margin-top: 0;
+			}
+
+			&:last-of-type {
+				margin-top: 0;
+				margin-bottom: 55px
+			}
+		}
+
+		@media(max-width: $finalBreak) {
+			margin-bottom: 40px;
+
+			&:first-of-type {
+				margin-top: 40px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 40px
+			}
+
+			&-icon svg {
+				height: 120px;
+				width: 120px;
 			}
 		}
 	}
