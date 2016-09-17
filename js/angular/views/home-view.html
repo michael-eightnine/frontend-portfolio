@@ -28,7 +28,7 @@
 		<div class="inner projects-list">
 			<span ng-repeat="project in projects" class="project-wrap">
 				<div class="projects-list-item {{project.featuredStatus}}">
-					<a ng-href="#/projects/{{project.id}}" class="project-wrap-link" title="View Project">
+					<a ng-href="#/work/{{project.id}}" class="project-wrap-link" title="View Project">
 						<h3>{{project.name}}</h3>
 						<p class="description" ng-bind-html="project.description | safe"></p>
 						<div class="squiggle"></div>

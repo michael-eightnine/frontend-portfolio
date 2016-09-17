@@ -1,5 +1,5 @@
 //APP
-var app = angular.module('PortfolioApp', ['ngRoute', 'ngAnimate', 'slick']);
+var app = angular.module('PortfolioApp', ['ngRoute', 'slick']);
 
 //ROUTING
 app.config(function ($routeProvider) {
@@ -8,7 +8,7 @@ app.config(function ($routeProvider) {
 		controller: "HomeController",
 		templateUrl: "js/angular/views/home-view.html"
 	})
-	.when('/projects/:projectId', {
+	.when('/work/:projectId', {
 		controller: 'ProjectController',
 		templateUrl: 'js/angular/views/project-view.html'
 	})
@@ -17,27 +17,11 @@ app.config(function ($routeProvider) {
 	});
 });
 
-//HEADER INIT REGARDLESS OF VIEW LOADED
-app.run(function($rootScope) {
-
-});
-
-//FIX INTERPOLATION ERROR
-app.config(function ($sceDelegateProvider) {
-	$sceDelegateProvider.resourceUrlWhitelist([
-		'self',
-		'https://player.vimeo.com/**'
-	]);
-})
-
 //CONTROLLERS
 app.controller('HomeController', ['$scope', 'projects', function($scope, projects) {
 	projects.success(function(data) {
 		$scope.projects = data;
 	});
-
-	//Assign page class for animation
-	$scope.pageClass = 'home-screen';
 
 	//init function for binding
 	function bindListeners() {
@@ -74,12 +58,6 @@ app.controller('ProjectController', ['$scope', '$routeParams', '$http',
 		.error(function(data) {
 			console.log("Failed to get data")
 		});
-
-		//Assign page class for animation
-		$scope.pageClass = 'project-screen project-content';
-
-		//Project page initializations
-		//projectLoad();
 	}
 ]);
 
