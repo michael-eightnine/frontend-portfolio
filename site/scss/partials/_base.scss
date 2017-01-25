@@ -41,6 +41,17 @@ body {
 	background: #FFF;
 }
 
+::selection {
+  background: $blue;
+  color: white;
+}
+
+::-moz-selection {
+  background: $blue;
+  color: white;
+}
+
+
 .svg {
 	max-width: 100%;
 }

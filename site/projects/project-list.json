@@ -24,7 +24,7 @@
   {
 	  "id": "console-js",
 	  "name": "ConsoleJS",
-	  "description": "ConsoleJS is a JavaScript plugin for building an old-school console interface that runs custom defined commands and actions. Originally intended as a navigational interface for a personal blog I was building, I saw it could be built out to accept configurations with relative ease and soon enough this plugin was born. <span class=\"link-style\">Learn More<\/span>",
+	  "description": "ConsoleJS is a JavaScript plugin for easily building an old-school console interface that runs custom defined commands and actions. Originally intended as a navigational interface for a personal blog I was building, I saw it could be built out to accept configurations with relative ease and soon enough this plugin was born. <span class=\"link-style\">Learn More<\/span>",
 	  "langs": [
 		  "VanillaJS",
 		  "SCSS",

@@ -1,5 +1,5 @@
 {
-    "name": "Console JS",
+    "name": "ConsoleJS",
     "description": "consoleJS is a JavaScript plugin for building an old-school console interface that runs custom defined commands and actions. Originally intended as a navigational interface for a personal blog I was building, I saw it could be built out to accept configurations with relative ease. Admittedly there aren't a ton of practical applications, but hey, the web can't all be productivity tools and MVC frameworks!",
     "githubUrl": "https:\/\/github.com/michael-eightnine/consoleJS",
     "langs": [
