@@ -1,0 +1,14 @@
+{
+    "name": "Jake's Market",
+    "description": "Jake's Market is a responsive, multi-theme e-commerce website built on the KonaKart platform. I designed and created the site to be used as a demo for all of Dunn Solutions' potential e-commerce clients, and so far it has been once of our best received demo websites. Jake's Market's target demographic is young urban adults, so the clean, modern, inviting design of both themes was instrumental in drawing these customers in.",
+    "images": [
+    	"http://eightnine.co/smith/img/jakes/1.png",
+    	"http://eightnine.co/smith/img/jakes/2.png",
+    	"http://eightnine.co/smith/img/jakes/3.png"
+    ],
+    "langs": [
+        "Foundation",
+        "SCSS",
+        "JavaScript"
+    ]
+}

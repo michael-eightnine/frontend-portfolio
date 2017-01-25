@@ -3,6 +3,7 @@ var app = angular.module('PortfolioApp', ['ngRoute', 'slick']);
 
 //ROUTING
 app.config(function ($routeProvider) {
+	"ngInject";
 	$routeProvider
 	.when('/', {
 		controller: "HomeController",
@@ -19,6 +20,7 @@ app.config(function ($routeProvider) {
 
 //CONTROLLERS
 app.controller('HomeController', ['$scope', 'projects', function($scope, projects) {
+	"ngInject";
 	projects.success(function(data) {
 		$scope.projects = data;
 	});
@@ -29,7 +31,7 @@ app.controller('HomeController', ['$scope', 'projects', function($scope, project
 			$(this).toggleClass("active");
 		})
 
-		$("header").on("click", ".nav-link", function(e) {
+		$("header, .about").on("click", ".nav-link", function(e) {
 			e.preventDefault();
 			e.stopImmediatePropagation();
 			if($(window).width() <= 740)
@@ -50,6 +52,7 @@ app.controller('HomeController', ['$scope', 'projects', function($scope, project
 
 app.controller('ProjectController', ['$scope', '$routeParams', '$http',
 	function($scope, $routeParams, $http, $sce) {
+		"ngInject";
 		$scope.video = false;
 
 		$http.get('projects/' + $routeParams.projectId + '.json').success(function(data) {
@@ -63,6 +66,7 @@ app.controller('ProjectController', ['$scope', '$routeParams', '$http',
 
 //SERVICES
 app.factory('projects', ['$http', function($http) {
+	"ngInject";
 	return $http.get('projects/project-list.json')
 	.success(function(data) {
 		return data;
@@ -75,6 +79,7 @@ app.factory('projects', ['$http', function($http) {
 
 //FILTERS
 app.filter('safe', function($sce) {
+	"ngInject";
 	return function(val) {
 		return $sce.trustAsHtml(val);
 	};

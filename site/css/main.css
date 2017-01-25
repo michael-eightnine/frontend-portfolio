@@ -56,6 +56,8 @@ body {
 
 a {
   color: #000; }
+  a.blue-link {
+    color: blue; }
 
 .clearfix:after {
   content: "";

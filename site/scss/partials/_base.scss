@@ -58,6 +58,10 @@ body {
 
 a {
 	color: $black;
+
+	&.blue-link {
+		color: $blue;
+	}
 }
 
 .clearfix:after {
