@@ -2,7 +2,6 @@
     "name": "Chat-ROM",
     "description": "Chat-ROM is a completely functional early 2000's style chatroom, primarily built with AngularJS using Firebase for real time data storage. Drawing stylistic influence from the Windows 98 era interfaces I grew up with, Chat-ROM creates a semblance of nostalgia at a surface level while being extremely modern in its functional execution.",
     "demoUrl": "http:\/\/www.eightnine.co/chatrom",
-    "githubUrl": "http:\/\/www.eightnine.co/chatrom",
     "langs": [
         "AngularJS",
         "Firebase",
