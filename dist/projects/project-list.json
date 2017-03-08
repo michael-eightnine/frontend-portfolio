@@ -1,12 +1,12 @@
 [
   {
-	  "id": "jakes-market",
-	  "name": "Jake's Market",
-	  "description": "Jake's Market is a fully responsive, multi-theme e-commerce site built off of KonaKart, a java based retail platform. <span class=\"link-style\">Learn More<\/span>",
+	  "id": "console-js",
+	  "name": "ConsoleJS",
+	  "description": "ConsoleJS is a JavaScript plugin for easily building an old-school console interface that runs custom defined commands and actions. <span class=\"link-style\">Learn More<\/span>",
 	  "langs": [
-		  "Foundation",
+		  "VanillaJS",
 		  "SCSS",
-		  "JavaScript"
+		  "That's it!"
 	  ],
 	  "featuredStatus": "regular"
   },
@@ -22,13 +22,13 @@
 	  "featuredStatus": "regular"
   },
   {
-	  "id": "console-js",
-	  "name": "ConsoleJS",
-	  "description": "ConsoleJS is a JavaScript plugin for easily building an old-school console interface that runs custom defined commands and actions. Originally intended as a navigational interface for a personal blog I was building, I saw it could be built out to accept configurations with relative ease and soon enough this plugin was born. <span class=\"link-style\">Learn More<\/span>",
+	  "id": "hometown-advantage",
+	  "name": "HTA",
+    "description": "HTA (Hometown Advantage) is a ReactJS based content stream/blog created for the Chicago-based artist of the same name. Built as a Single-Page Application leveraging React Router, it works effortlessly on both desktop and mobile while visually extending HTA's unique graphic style. <span class=\"link-style\">Learn More<\/span>",
 	  "langs": [
-		  "VanillaJS",
+		  "ReactJS",
 		  "SCSS",
-		  "That's it!"
+		  "SVG"
 	  ],
 	  "featuredStatus": "featured"
   }

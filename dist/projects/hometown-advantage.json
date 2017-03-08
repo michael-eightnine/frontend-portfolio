@@ -1,0 +1,11 @@
+{
+    "name": "HTA",
+    "description": "In our modern era every artist needs a web presence and Chicago-based artist HTA (Hometown Advantage) is no different. Originally using Instagram as a platform for his content and creations, the lack of deep customization and curation quickly became undesirable. <br><br> To free HTA from these restrictions I created a ReactJS based, SPA-style content stream that not only provides a completely custom visual experience but also employs cutting-edge web technologies under the hood. <br><br> In a way, this is a perfect representation of why I love front-end development. The ability to create a uniquely branded, interactive experience like HTA's website is both rewarding and invigorating.",
+    "githubUrl": "https:\/\/github.com/michael-eightnine/hometown-advantage",
+    "siteUrl": "http:\/\/www.hta.eightnine.co/",
+    "langs": [
+        "ReactJS",
+        "SCSS",
+        "SVG"
+    ]
+}

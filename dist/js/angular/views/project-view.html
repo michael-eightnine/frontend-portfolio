@@ -20,13 +20,16 @@
             </div>
         </div>
 
-        <div class="btns-container" ng-if="detail.githubUrl || detail.demoUrl">
-             <a ng-if="detail.githubUrl" ng-href="{{detail.githubUrl}}" class="btn" target="_blank">
-                 View GitHub
-             </a>
-             <a ng-if="detail.demoUrl" ng-href="{{detail.demoUrl}}" class="btn" target="_blank">
-                 View Demo
-             </a>
+        <div class="btns-container" ng-if="detail.githubUrl || detail.demoUrl || demo.siteUrl">
+          <a ng-if="detail.demoUrl" ng-href="{{detail.demoUrl}}" class="btn" target="_blank">
+              View Demo
+          </a>
+          <a ng-if="detail.siteUrl" ng-href="{{detail.siteUrl}}" class="btn" target="_blank">
+              View Site
+          </a>
+           <a ng-if="detail.githubUrl" ng-href="{{detail.githubUrl}}" class="btn" target="_blank">
+               View GitHub
+           </a>
         </div>
 
         <slick ng-if="detail.images" dots="true" init-onload=true data="detail.images" arrows="true">
